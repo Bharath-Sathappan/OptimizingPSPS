@@ -1,0 +1,43 @@
+# 1) choose base container
+ARG BASE_CONTAINER=ghcr.io/ucsd-ets/datascience-notebook:stable
+
+FROM $BASE_CONTAINER
+
+LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
+
+# 2) change to root to install system dependencies
+USER root
+
+# Install system dependencies for geospatial packages
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    libproj-dev \
+    proj-data \
+    proj-bin \
+    libgeos-dev \
+    gdal-bin \
+    libgdal-dev \
+    htop \
+    && rm -rf /var/lib/apt/lists/*
+
+# 3) install Python packages as notebook user
+USER jovyan
+
+# Install required Python packages
+RUN pip install --no-cache-dir \
+    pandas==2.2.3 \
+    networkx==3.2.1 \
+    geopandas==1.0.1 \
+    shapely==2.0.6 \
+    folium==0.18.0 \
+    matplotlib==3.9.2 \
+    seaborn==0.13.2 \
+    numpy==1.24.4 \
+    branca==0.8.0
+
+# Set Python path
+ENV PYTHONPATH=/home/jovyan/work
+
+# Keep default CMD to run Jupyter notebook
+CMD ["/bin/bash"]
