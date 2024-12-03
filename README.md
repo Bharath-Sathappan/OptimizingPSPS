@@ -1,4 +1,4 @@
-# OptimizingPSPS
+# Optimizing PSPS
 
 ## Accessing and Storing Necessary Data
 The data files should be given by our mentor phi through the sempra link and accessed in the data folder. The data for src_wings_meteorology_windspeed_snapshot_2023_08_02, src_wings_meteorology_station_summary_snapshot_2023_08_02, and gis_weatherstation_shape_2024_10_04 are read in through pd.excel in our notebook and the dev_wings_agg_span_2024_01_01 and src_vri_snapshot_2024_03_20 datsets are read in as csv.
@@ -25,8 +25,10 @@ Our dependencies are located in the docker image here https://github.com/users/w
 - branca (version 0.8.0)
 
 ## Commands needed to run
-  - pull our notebook down and store the data in the same folder as our notebook, don't put data files in a data folder
-  - pull the docker image for our project using: docker pull ghcr.io/wkam3/q1-project-image-v2:latest
-  - run the docker container: docker run -p 8888:8888 -v "$(pwd):/home/jovyan/work" ghcr.io/wkam3/q1-project-image-v2:latest
+  - Pull our notebook down and store the data in the same folder as our notebook, don't put data files in a data folder
+  - Pull the docker image for our project using: docker pull ghcr.io/wkam3/q1-project-image-v2:latest
+  - Run the docker container: docker run -p 8888:8888 -v "$(pwd):/home/jovyan/work" ghcr.io/wkam3/q1-project-image-v2:latest
   - Access where you downloaded our jupyter notebook along with the required data and press run all cells
+  - Because our CMD is commented out, the jupyter notebook server should start automatically
+  - The Notebook should take around 10-20 minutes to finish running, figures will be saved in the same directory as our notebook 
   
