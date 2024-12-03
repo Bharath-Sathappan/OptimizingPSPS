@@ -32,6 +32,6 @@ cd <repository_name>
   - Run the docker container: docker run -p 8888:8888 -v "%CD%:/home/jovyan/work" ghcr.io/wkam3/q1-project-image-v2:latest
   - Access where you downloaded our jupyter notebook along with the required data and press run all cells
   - Because our CMD is commented out, the jupyter notebook server should start automatically you need to look for a url like this http://127.0.0.1:8888/?token=<some_token> and paste into browers
-  - You should see either our repo or a work folder that contains our repo, then you can run our notebook ensure that you have the required data files
+  - You should see either our repo or a work folder that contains our repo then run our Final_Notebook_Code notebook, ensure that you have the required data files
   - The Notebook should take around 10-20 minutes to finish running, figures will be saved in the same directory as our notebook 
   
