@@ -24,7 +24,7 @@ Our dependencies are located in the docker image here https://github.com/users/w
 - numpy (version 1.24.4)
 - branca (version 0.8.0)
 
-  ## Commands needed to run
+## Commands needed to run
   - pull our notebook down and store the data in the same folder as our notebook, don't put data files in a data folder
   - pull the docker image for our project using: docker pull ghcr.io/wkam3/q1-project-image:latest
   - run the docker container: docker run -p 8888:8888 -v "$(pwd):/home/jovyan/work" ghcr.io/wkam3/q1-project-image:latest
