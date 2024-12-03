@@ -23,13 +23,23 @@ Our dependencies are located in the docker image here https://github.com/users/w
 - seaborn (version 0.13.2)
 - numpy (version 1.24.4)
 - branca (version 0.8.0)
-
-## Commands needed to run
+##Commnads to run using Linux
+ - Pull our notebook : git clone https://github.com/Bharath-Sathappan/OptimizingPSPS.git
+cd OptimizingPSPS
+  - Download data from Sempra Website given by our mentors and you can either make the data file using mkdir -p Data and move the zip files into the data file or manually move the whole data file into the same directory as the cloned repo mv /path/to/downloaded/zip/files/*.zip Data/
+  - Pull the docker image for our project using: docker pull ghcr.io/wkam3/q1-project-image-v2:latest
+  - Run the docker container: docker run -p 8888:8888 -v "$(pwd):/home/jovyan/work" ghcr.io/wkam3/q1-project-image-v2:latest
+  - Access where you downloaded our jupyter notebook along with the required data and press run all cells
+  - Because our CMD is commented out, the jupyter notebook server should start automatically you need to look for a url like this http://127.0.0.1:8888/?token=<some_token> and paste into browers
+  - You should see either our repo or a work folder that contains our repo then run our Final_Notebook_Code notebook, ensure that you have the required data files
+  - The Notebook should take around 10-20 minutes to finish running, figures will be saved in the same directory as our notebook
+  - The result of these steps shouldc look like this ![Alt text](/images/result.png)
+## Commands to run using Windows
   - Pull our notebook : git clone https://github.com/Bharath-Sathappan/OptimizingPSPS.git
-cd <repository_name>
+cd OptimizingPSPS
   - Download data from Sempra Website given by our mentors and you can either make the data file using mkdir -p Data and move the zip files into the data file or manually move the whole data file into the same directory as the cloned repo
   - Pull the docker image for our project using: docker pull ghcr.io/wkam3/q1-project-image-v2:latest
-  - Run the docker container: docker run -p 8888:8888 -v "%CD%:/home/jovyan/work" ghcr.io/wkam3/q1-project-image-v2:latest
+  - Run the docker container: docker run -p 8888:8888 -v "%CD%:/home/jovyan/work" ghcr.io/wkam3/q1-project-image-v2:latest (windows) docker run -p 8888:8888 -v "$(pwd):/home/jovyan/work" ghcr.io/wkam3/q1-project-image-v2:latest(linux)
   - Access where you downloaded our jupyter notebook along with the required data and press run all cells
   - Because our CMD is commented out, the jupyter notebook server should start automatically you need to look for a url like this http://127.0.0.1:8888/?token=<some_token> and paste into browers
   - You should see either our repo or a work folder that contains our repo then run our Final_Notebook_Code notebook, ensure that you have the required data files
