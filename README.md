@@ -25,10 +25,13 @@ Our dependencies are located in the docker image here https://github.com/users/w
 - branca (version 0.8.0)
 
 ## Commands needed to run
-  - Pull our notebook down and store the data in the same folder as our notebook, ensure it is in a folder named 'Data'
+  - Pull our notebook : git clone https://github.com/Bharath-Sathappan/OptimizingPSPS.git
+cd <repository_name>
+  - Download data from Sempra Website given by our mentors and you can either make the data file using mkdir -p Data and move the zip files into the data file or manually move the whole data file into the same directory as the cloned repo
   - Pull the docker image for our project using: docker pull ghcr.io/wkam3/q1-project-image-v2:latest
   - Run the docker container: docker run -p 8888:8888 -v "%CD%:/home/jovyan/work" ghcr.io/wkam3/q1-project-image-v2:latest
   - Access where you downloaded our jupyter notebook along with the required data and press run all cells
-  - Because our CMD is commented out, the jupyter notebook server should start automatically
+  - Because our CMD is commented out, the jupyter notebook server should start automatically you need to look for a url like this http://127.0.0.1:8888/?token=<some_token> and paste into browers
+  - You should see either our repo or a work folder that contains our repo, then you can run our notebook ensure that you have the required data files
   - The Notebook should take around 10-20 minutes to finish running, figures will be saved in the same directory as our notebook 
   
