@@ -4,7 +4,7 @@
 The data files should be given by our mentor phi through the sempra link and accessed in the data folder. The data for src_wings_meteorology_windspeed_snapshot_2023_08_02, src_wings_meteorology_station_summary_snapshot_2023_08_02, and gis_weatherstation_shape_2024_10_04 are read in through pd.excel in our notebook and the dev_wings_agg_span_2024_01_01 and src_vri_snapshot_2024_03_20 datsets are read in as csv.
 
 ## Software Dependencies
-Our dependencies are located in the docker image here https://github.com/users/wkam3/packages/container/package/q1-project-image and the system dependencies are 
+Our dependencies are located in the docker image here https://github.com/users/wkam3/packages/container/package/q1-project-image and the system dependencies and python packages are listed below:
   - gcc
   - g++
   - libproj-dev
@@ -14,7 +14,6 @@ Our dependencies are located in the docker image here https://github.com/users/w
   - gdal-bin
   - libgdal-dev
   - htop
-and our python packages are
 - pandas (version 2.2.3)
 - networkx (version 3.2.1)
 - geopandas (version 1.0.1)
