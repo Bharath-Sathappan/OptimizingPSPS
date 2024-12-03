@@ -25,7 +25,7 @@ Our dependencies are located in the docker image here https://github.com/users/w
 - branca (version 0.8.0)
 
 ## Commands needed to run
-  - Pull our notebook down and store the data in the same folder as our notebook, don't put data files in a data folder
+  - Pull our notebook down and store the data in the same folder as our notebook, ensure it is in a folder named 'Data'
   - Pull the docker image for our project using: docker pull ghcr.io/wkam3/q1-project-image-v2:latest
   - Run the docker container: docker run -p 8888:8888 -v "$(pwd):/home/jovyan/work" ghcr.io/wkam3/q1-project-image-v2:latest
   - Access where you downloaded our jupyter notebook along with the required data and press run all cells
